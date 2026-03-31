@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Indie Flower', cursive;
+    background-color: #ffe4e1;
+    overflow: hidden;
+}
+
+.container {
+    position: relative; /* Required for absolute positioning of No button */
+    text-align: center;
+    width: 90vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #ffb6c1;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.gif_container {
+    position: relative;
+    z-index: 5;
+}
+
+.gif_container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: max-width 0.3s ease;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background-color: #ff6b81;
+    color: white;
+    transition: transform 0.15s ease-out, background-color 0.3s;
+    transform-origin: center bottom;
+}
+
+#noButton {
+    /* Fast smooth transition for the flee-from-cursor effect */
+    transition: left 0.15s ease-out, top 0.15s ease-out;
+    z-index: 10;
+    user-select: none;
+}
+
+#noButton.hidden {
+    display: none !important; /* */
+}
